@@ -7,11 +7,11 @@ from docx.shared import Inches
 from docx.shared import Pt
 
 document = Document('./模板.docx')
-name = '党建规范化可视应用平台运营版V1.0'
+name = '养老大数据平台_v1.5.0'
 document.sections[0].header.paragraphs[0].text = name
 # document.sections[0].footer.paragraphs[0].text= '党建规范化可视应用平台运营版V1.0'
 
-model_dir = '/Library/WebServer/Documents/sooc_view/apps/'
+model_dir = '/Library/WebServer/Documents/bigdata/apps/'
 
 def getFile(dir, files):
   l = os.listdir(dir)
@@ -39,7 +39,7 @@ for i in files:
       paragraph_format.space_before = Pt(0)
       paragraph_format.space_after = Pt(0)
       num += 1
-  if num > 3000:
+  if num > 4000:
     break
   fp.close()
 
